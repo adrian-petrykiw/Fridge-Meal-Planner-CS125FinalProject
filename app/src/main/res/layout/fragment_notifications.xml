@@ -25,7 +25,7 @@
 
             <EditText
                 android:id="@+id/mealplan"
-                android:layout_width="match_parent"
+                android:layout_width="268dp"
                 android:layout_height="100dp"
                 android:layout_marginStart="50dp"
                 android:layout_marginLeft="50dp"
@@ -61,13 +61,13 @@
 
                     <TextView
                         android:id="@+id/breakfast1"
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/breakfast" />
 
                     <Spinner
                         android:id="@+id/mondaybreakfast"
-                        android:layout_width="500dp"
+                        android:layout_width="316dp"
                         android:layout_height="50dp" />
 
                 </TableRow>
@@ -127,13 +127,13 @@
 
                     <TextView
                         android:id="@+id/breakfast2"
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/breakfast" />
 
                     <Spinner
                         android:id="@+id/tuesdaybreakfast"
-                        android:layout_width="500dp"
+                        android:layout_width="316dp"
                         android:layout_height="50dp" />
                 </TableRow>
 
@@ -196,8 +196,8 @@
 
                     <Spinner
                         android:id="@+id/wednesdaybreakfast"
-                        android:layout_width="500dp"
-                        android:layout_height="match_parent" />
+                        android:layout_width="316dp"
+                        android:layout_height="50dp" />
                 </TableRow>
 
                 <TableRow
@@ -258,7 +258,7 @@
 
                     <Spinner
                         android:id="@+id/thursdaybreakfast"
-                        android:layout_width="500dp"
+                        android:layout_width="316dp"
                         android:layout_height="match_parent" />
                 </TableRow>
 
@@ -320,7 +320,7 @@
 
                     <Spinner
                         android:id="@+id/fridaybreakfast"
-                        android:layout_width="500dp"
+                        android:layout_width="316dp"
                         android:layout_height="50dp" />
                 </TableRow>
 
@@ -382,7 +382,7 @@
 
                     <Spinner
                         android:id="@+id/saturdaybreakfast"
-                        android:layout_width="500dp"
+                        android:layout_width="316dp"
                         android:layout_height="50dp" />
                 </TableRow>
 
@@ -444,7 +444,7 @@
 
                     <Spinner
                         android:id="@+id/sundaybreakfast"
-                        android:layout_width="500dp"
+                        android:layout_width="316dp"
                         android:layout_height="50dp" />
                 </TableRow>
 

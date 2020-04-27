@@ -5,7 +5,6 @@
     <string name="title_notifications">Meal Plan</string>
     <string name="breakfast">Breakfast</string>
     <string name="monday">Monday</string>
-    <string name="breakfast">Breakfast</string>
     <string name="lunch">Lunch</string>
     <string name="dinner">Dinner</string>
     <string name="thursday">Thursday</string>
@@ -15,4 +14,6 @@
     <string name="sunday">Sunday</string>
     <string name="tuesday">Tuesday</string>
     <string name="meal_plan">Meal Plan</string>
+    <string name="generate_recipes">Generate Recipes</string>
+    <string name="textview">TextView</string>
 </resources>
