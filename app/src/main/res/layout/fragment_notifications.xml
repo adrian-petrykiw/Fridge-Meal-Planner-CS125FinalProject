@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#4CAF50"
     tools:context=".ui.notifications.NotificationsFragment">
 
     <androidx.core.widget.NestedScrollView
@@ -33,9 +34,11 @@
                 android:layout_marginRight="0dp"
                 android:layout_marginBottom="10dp"
                 android:ems="10"
+                android:fontFamily="sans-serif"
                 android:inputType="textPersonName"
                 android:text="@string/meal_plan"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+                android:textColor="#FFFFFF"
                 app:layout_constraintBottom_toTopOf="@+id/mondaytext"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +51,8 @@
                 android:layout_marginTop="10dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="@string/monday" />
+                android:text="@string/monday"
+                android:textColor="#FFFFFF" />
 
             <TableLayout
                 android:id="@+id/mondaytableLayout"
@@ -63,11 +67,12 @@
                         android:id="@+id/breakfast1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="@string/breakfast" />
+                        android:text="@string/breakfast"
+                        android:textColor="#FFFFFF" />
 
                     <Spinner
                         android:id="@+id/mondaybreakfast"
-                        android:layout_width="316dp"
+                        android:layout_width="306dp"
                         android:layout_height="50dp" />
 
                 </TableRow>
@@ -80,7 +85,8 @@
                         android:id="@+id/lunch1"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:text="@string/lunch" />
+                        android:text="@string/lunch"
+                        android:textColor="#FFFFFF" />
 
                     <Spinner
                         android:id="@+id/mondaylunch"
@@ -96,7 +102,8 @@
                         android:id="@+id/dinner1"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:text="@string/dinner" />
+                        android:text="@string/dinner"
+                        android:textColor="#FFFFFF" />
 
                     <Spinner
                         android:id="@+id/mondaydinner"
@@ -114,7 +121,8 @@
                 android:autofillHints=""
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="@string/tuesday" />
+                android:text="@string/tuesday"
+                android:textColor="#FFFFFF" />
 
             <TableLayout
                 android:id="@+id/tuesdaytableLayout"
@@ -129,11 +137,12 @@
                         android:id="@+id/breakfast2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="@string/breakfast" />
+                        android:text="@string/breakfast"
+                        android:textColor="#FFFFFF" />
 
                     <Spinner
                         android:id="@+id/tuesdaybreakfast"
-                        android:layout_width="316dp"
+                        android:layout_width="306dp"
                         android:layout_height="50dp" />
                 </TableRow>
 
@@ -145,7 +154,8 @@
                         android:id="@+id/lunch2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:text="@string/lunch" />
+                        android:text="@string/lunch"
+                        android:textColor="#FFFFFF" />
 
                     <Spinner
                         android:id="@+id/tuesdaylunch"
@@ -161,7 +171,8 @@
                         android:id="@+id/dinner2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:text="@string/dinner" />
+                        android:text="@string/dinner"
+                        android:textColor="#FFFFFF" />
 
                     <Spinner
                         android:id="@+id/tuesdaydinner"
@@ -177,7 +188,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="@string/wednesday" />
+                android:text="@string/wednesday"
+                android:textColor="#FFFFFF" />
 
             <TableLayout
                 android:id="@+id/wednesdaytableLayout"
@@ -192,11 +204,12 @@
                         android:id="@+id/breakfast3"
                         android:layout_width="100dp"
                         android:layout_height="50dp"
-                        android:text="@string/breakfast" />
+                        android:text="@string/breakfast"
+                        android:textColor="#FFFFFF" />
 
                     <Spinner
                         android:id="@+id/wednesdaybreakfast"
-                        android:layout_width="316dp"
+                        android:layout_width="310dp"
                         android:layout_height="50dp" />
                 </TableRow>
 
@@ -208,7 +221,8 @@
                         android:id="@+id/lunch3"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="@string/lunch" />
+                        android:text="@string/lunch"
+                        android:textColor="#FFFFFF" />
 
                     <Spinner
                         android:id="@+id/wednesdaylunch"
@@ -224,7 +238,8 @@
                         android:id="@+id/dinner3"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="@string/dinner" />
+                        android:text="@string/dinner"
+                        android:textColor="#FFFFFF" />
 
                     <Spinner
                         android:id="@+id/wednesdaydinner"
@@ -239,7 +254,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="@string/thursday" />
+                android:text="@string/thursday"
+                android:textColor="#FFFFFF" />
 
             <TableLayout
                 android:id="@+id/thursdaytablelayout"
@@ -254,11 +270,12 @@
                         android:id="@+id/breakfast4"
                         android:layout_width="100dp"
                         android:layout_height="50dp"
-                        android:text="@string/breakfast" />
+                        android:text="@string/breakfast"
+                        android:textColor="#FFFFFF" />
 
                     <Spinner
                         android:id="@+id/thursdaybreakfast"
-                        android:layout_width="316dp"
+                        android:layout_width="310dp"
                         android:layout_height="match_parent" />
                 </TableRow>
 
@@ -270,7 +287,8 @@
                         android:id="@+id/lunch4"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="@string/lunch" />
+                        android:text="@string/lunch"
+                        android:textColor="#FFFFFF" />
 
                     <Spinner
                         android:id="@+id/thursdaylunch"
@@ -286,7 +304,8 @@
                         android:id="@+id/dinner4"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="@string/dinner" />
+                        android:text="@string/dinner"
+                        android:textColor="#FFFFFF" />
 
                     <Spinner
                         android:id="@+id/thursdaydinner"
@@ -301,7 +320,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="@string/friday" />
+                android:text="@string/friday"
+                android:textColor="#FFFFFF" />
 
             <TableLayout
                 android:id="@+id/fridaytablelayout"
@@ -316,11 +336,12 @@
                         android:id="@+id/breakfast5"
                         android:layout_width="100dp"
                         android:layout_height="50dp"
-                        android:text="@string/breakfast" />
+                        android:text="@string/breakfast"
+                        android:textColor="#FFFFFF" />
 
                     <Spinner
                         android:id="@+id/fridaybreakfast"
-                        android:layout_width="316dp"
+                        android:layout_width="310dp"
                         android:layout_height="50dp" />
                 </TableRow>
 
@@ -332,7 +353,8 @@
                         android:id="@+id/lunch5"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="@string/lunch" />
+                        android:text="@string/lunch"
+                        android:textColor="#FFFFFF" />
 
                     <Spinner
                         android:id="@+id/fridaylunch"
@@ -348,7 +370,8 @@
                         android:id="@+id/dinner5"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="@string/dinner" />
+                        android:text="@string/dinner"
+                        android:textColor="#FFFFFF" />
 
                     <Spinner
                         android:id="@+id/fridaydinner"
@@ -363,7 +386,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="@string/saturday" />
+                android:text="@string/saturday"
+                android:textColor="#FFFFFF" />
 
             <TableLayout
                 android:id="@+id/saturdaytablelayout"
@@ -378,11 +402,12 @@
                         android:id="@+id/breakfast6"
                         android:layout_width="100dp"
                         android:layout_height="50dp"
-                        android:text="@string/breakfast" />
+                        android:text="@string/breakfast"
+                        android:textColor="#FFFFFF" />
 
                     <Spinner
                         android:id="@+id/saturdaybreakfast"
-                        android:layout_width="316dp"
+                        android:layout_width="310dp"
                         android:layout_height="50dp" />
                 </TableRow>
 
@@ -394,7 +419,8 @@
                         android:id="@+id/lunch6"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="@string/lunch" />
+                        android:text="@string/lunch"
+                        android:textColor="#FFFFFF" />
 
                     <Spinner
                         android:id="@+id/saturdaylunch"
@@ -410,7 +436,8 @@
                         android:id="@+id/dinner6"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="@string/dinner" />
+                        android:text="@string/dinner"
+                        android:textColor="#FFFFFF" />
 
                     <Spinner
                         android:id="@+id/saturdaydinner"
@@ -425,7 +452,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="@string/sunday" />
+                android:text="@string/sunday"
+                android:textColor="#FFFFFF" />
 
             <TableLayout
                 android:id="@+id/sundaytablelayout"
@@ -440,11 +468,12 @@
                         android:id="@+id/breakfast7"
                         android:layout_width="100dp"
                         android:layout_height="50dp"
-                        android:text="@string/breakfast" />
+                        android:text="@string/breakfast"
+                        android:textColor="#FFFFFF" />
 
                     <Spinner
                         android:id="@+id/sundaybreakfast"
-                        android:layout_width="316dp"
+                        android:layout_width="310dp"
                         android:layout_height="50dp" />
                 </TableRow>
 
@@ -456,7 +485,8 @@
                         android:id="@+id/lunch7"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="@string/lunch" />
+                        android:text="@string/lunch"
+                        android:textColor="#FFFFFF" />
 
                     <Spinner
                         android:id="@+id/sundaylunch"
@@ -472,7 +502,8 @@
                         android:id="@+id/dinner7"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="@string/dinner" />
+                        android:text="@string/dinner"
+                        android:textColor="#FFFFFF" />
 
                     <Spinner
                         android:id="@+id/sundaydinner"
