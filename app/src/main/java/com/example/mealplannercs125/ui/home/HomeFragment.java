@@ -1,9 +1,11 @@
 package com.example.mealplannercs125.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,7 +14,13 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+
 import com.example.mealplannercs125.R;
+import com.example.mealplannercs125.ui.dashboard.DashboardFragment;
 
 public class HomeFragment extends Fragment {
 
@@ -28,6 +36,14 @@ public class HomeFragment extends Fragment {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
+            }
+        });
+        Button recipegen = (Button) root.findViewById(R.id.generate_recipes);
+        recipegen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startDash = new Intent(getActivity(), DashboardFragment.class);
+                startActivity(startDash);
             }
         });
 
