@@ -6,13 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
+    <TextView
+        android:id="@+id/text_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="376dp"
+        android:layout_marginLeft="376dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="612dp"
+        android:text="@string/_1337"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fridgelogo" />
+
+    <ImageView
+        android:id="@+id/fridgelogo"
+        android:layout_width="447dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="368dp"
+        android:src="@drawable/fridge_prep_logo"
+        app:layout_constraintBottom_toTopOf="@+id/generate_recipes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:contentDescription="@string/todo" />
+
     <Button
-        android:id="@+id/button"
+        android:id="@+id/generate_recipes"
         style="@android:style/Widget.DeviceDefault.Button.Inset"
         android:layout_width="167dp"
         android:layout_height="49dp"
         android:layout_marginBottom="100dp"
-        android:background="#4CAF50"
+        android:background="#19c241"
         android:duplicateParentState="false"
         android:ellipsize="none"
         android:text="@string/generate_recipes"
