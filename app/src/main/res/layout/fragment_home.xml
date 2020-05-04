@@ -40,11 +40,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/fridgelogo"
+        app:layout_constraintBottom_toTopOf="@+id/generate_recipes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fridgelogo"
-        app:tag_separator="HASH_SEPARATOR"
         app:layout_constraintVertical_bias="0.23000002"
         tools:ignore="MissingConstraints" />
     <Button
