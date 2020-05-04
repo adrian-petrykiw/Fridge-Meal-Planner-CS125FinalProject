@@ -55,6 +55,7 @@ public class HomeFragment extends Fragment {
                 "salsa", "sandwich", "sauce", "seasoning", "skillet", "soda", "soup", "soy",
                 "spice", "steak", "stew", "syrup", "tartar", "taste", "tea", "toast", "vinegar",
                 "waffle", "water", "wheat", "wine", "wok", "yeast", "yogurt"};
+        String[] tagList2 = new String[]{"aroma", "bagel"};
         tagView.setTagList(tagList);
         List<TagModel> selected = tagView.getSelectedTags();
         // to here
