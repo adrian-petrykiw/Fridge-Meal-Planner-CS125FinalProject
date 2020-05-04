@@ -2,30 +2,40 @@ package com.example.mealplannercs125.ui.home;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.mealplannercs125.MainActivity;
 import com.example.mealplannercs125.R;
 import com.example.mealplannercs125.ui.dashboard.DashboardFragment;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.JsonHttpResponseHandler;
 import com.skyhope.materialtagview.TagView;
 import com.skyhope.materialtagview.enums.TagSeparator;
 import com.skyhope.materialtagview.model.TagModel;
+import org.json.JSONObject;
+
 
 import java.util.List;
 
-public class HomeFragment extends Fragment {
+import cz.msebera.android.httpclient.entity.mime.Header;
+
+public class HomeFragment extends Fragment{
 
     private HomeViewModel homeViewModel;
-
+    private String BASE_URL = "https://api.spoonacular.com/recipes/findByIngredients";
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
@@ -59,16 +69,45 @@ public class HomeFragment extends Fragment {
         tagView.setTagList(tagList);
         List<TagModel> selected = tagView.getSelectedTags();
         // to here
-
         Button recipegen = (Button) root.findViewById(R.id.generate_recipes);
         recipegen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent startDash = new Intent(getActivity(), DashboardFragment.class);
+                requestData(BASE_URL);
                 startActivity(startDash);
             }
         });
 
         return root;
+    }
+    public void requestData(String url) {
+        Unirest.get(https://api.spoonacular.com/recipes/findByIngredients?apiKey=dfe9b7f8ec604ff4a8542d687cb49953&includeNutrition=true&ingredients=apples,+flour,+sugar&number=2);
+        /*
+        AsyncHttpClient client = new AsyncHttpClient();
+
+        client.get(url, new JsonHttpResponseHandler() {
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers,
+                                  JSONObject response) {
+                // called when response HTTP status is "200 OK"
+                Log.d("Bitcoin", "JSON: " + response.toString());
+                try {
+                } catch (Exception e) {
+                    Log.e("Bitcoin", e.toString());
+                }
+            }
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable e,
+                                  JSONObject response) {
+
+                // called when response HTTP status is "4XX" (eg. 401, 403, 404)
+                Toast.makeText(HomeFragment.onAttach(this), "Request Failed", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+         */
     }
 }
