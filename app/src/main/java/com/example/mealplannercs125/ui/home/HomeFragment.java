@@ -16,6 +16,11 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.mealplannercs125.R;
 import com.example.mealplannercs125.ui.dashboard.DashboardFragment;
+import com.skyhope.materialtagview.TagView;
+import com.skyhope.materialtagview.enums.TagSeparator;
+import com.skyhope.materialtagview.model.TagModel;
+
+import java.util.List;
 
 public class HomeFragment extends Fragment {
 
@@ -33,6 +38,27 @@ public class HomeFragment extends Fragment {
                 textView.setText(s);
             }
         });
+
+        //added from here
+        TagView tagView = root.findViewById(R.id.text_view_show_more);
+        tagView.addTagSeparator(TagSeparator.AT_SEPARATOR);
+        String[] tagList = new String[]{"aroma", "bagel", "batter", "beans", "beer", "biscuit",
+                "bread", "broth", "burger", "butter", "cake", "candy", "caramel", "caviar",
+                "cheese", "chili", "chocolate", "cider", "cobbler", "cocoa", "coffee",
+                "cookie", "cream", "croissant", "crumble", "cuisine", "curd",
+                "dessert", "dish", "drink", "eggs", "entree", "filet", "fish",
+                "flour", "foie gras", "food", "glaze", "grill", "hamburger", "ice", "juice",
+                "ketchup", "kitchen", "lard", "liquor", "margarine", "marinade", "mayo",
+                "mayonnaise", "meat", "milk", "mousse", "muffin", "mushroom", "noodle", "nut",
+                "oil", "olive", "omelette", "pan", "pasta", "paste", "pastry", "pie", "pizza",
+                "plate", "pot", "poutine", "pudding", "raclette", "recipe", "rice", "salad",
+                "salsa", "sandwich", "sauce", "seasoning", "skillet", "soda", "soup", "soy",
+                "spice", "steak", "stew", "syrup", "tartar", "taste", "tea", "toast", "vinegar",
+                "waffle", "water", "wheat", "wine", "wok", "yeast", "yogurt"};
+        tagView.setTagList(tagList);
+        List<TagModel> selected = tagView.getSelectedTags();
+        // to here
+
         Button recipegen = (Button) root.findViewById(R.id.generate_recipes);
         recipegen.setOnClickListener(new View.OnClickListener() {
             @Override
