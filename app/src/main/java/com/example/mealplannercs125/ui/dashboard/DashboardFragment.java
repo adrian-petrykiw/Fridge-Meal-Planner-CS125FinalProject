@@ -18,6 +18,9 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import com.example.mealplannercs125.R;
+import com.skyhope.materialtagview.TagView;
+import com.skyhope.materialtagview.enums.TagSeparator;
+import com.skyhope.materialtagview.model.TagModel;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -35,8 +38,8 @@ public class DashboardFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         dashboardViewModel =
                 ViewModelProviders.of(this).get(DashboardViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
-        final TextView textView = root.findViewById(R.id.textView);
+        final View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
+
 //        dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
 //            @Override
 //            public void onChanged(@Nullable String s) {
@@ -61,10 +64,15 @@ public class DashboardFragment extends Fragment {
                         //Get thier value.
                         //Get the value for the first element and the value for the last element.
                     }
+                    TagView tagView = root.findViewById(R.id.text_view_show_more_two);
+                    tagView.addTagSeparator(TagSeparator.AT_SEPARATOR);
+                    String[] tagList = list.toArray(new String[0]);
+                    // to test a smaller list
+                    tagView.setTagList(tagList);
+                    List<TagModel> selected = tagView.getSelectedTags();
 
 
                     System.out.println(json);
-                    textView.setText(json);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
