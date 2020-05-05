@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4CAF50"
+    android:background="#32BD57"
     tools:context=".ui.notifications.NotificationsFragment">
 
     <TextView
@@ -77,7 +77,8 @@
                     <Spinner
                         android:id="@+id/mondaybreakfast"
                         android:layout_width="306dp"
-                        android:layout_height="50dp" />
+                        android:layout_height="50dp"
+                        android:textColor="#FFFFFF" />
 
                 </TableRow>
 

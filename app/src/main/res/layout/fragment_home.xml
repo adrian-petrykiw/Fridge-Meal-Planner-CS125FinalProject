@@ -11,41 +11,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="376dp"
-        android:layout_marginLeft="376dp"
         android:layout_marginEnd="3dp"
-        android:layout_marginRight="3dp"
         android:layout_marginBottom="612dp"
         android:text="@string/_1337"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fridgelogo" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/fridgelogo"
-        android:layout_width="447dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="368dp"
-        android:src="@drawable/fridge_prep_logo"
-        app:layout_constraintBottom_toTopOf="@+id/generate_recipes"
+        android:id="@+id/imageView"
+        android:layout_width="418dp"
+        android:layout_height="139dp"
+        android:src="@drawable/fridgepreplogoone"
+        app:layout_constraintBottom_toTopOf="@+id/nestedScrollView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        android:contentDescription="@string/todo" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="50dp"
         android:fillViewport="true"
         app:layout_constraintBottom_toTopOf="@+id/generate_recipes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fridgelogo">
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -67,7 +61,7 @@
         android:layout_width="167dp"
         android:layout_height="49dp"
         android:layout_marginBottom="100dp"
-        android:background="#19c241"
+        android:background="#32BD57"
         android:duplicateParentState="false"
         android:ellipsize="none"
         android:text="@string/generate_recipes"
