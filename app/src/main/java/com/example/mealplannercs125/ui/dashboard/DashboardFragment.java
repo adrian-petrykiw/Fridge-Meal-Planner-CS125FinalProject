@@ -54,16 +54,7 @@ public class DashboardFragment extends Fragment {
                 List<String> list = new ArrayList<String>();
                 try {
                     JSONArray getArray = outputapi();
-                    for(int i = 0; i < getArray.length(); i++) {
-                        JSONObject objects = getArray.getJSONObject(i);
-                        JsonParser jsonParser = new JsonParser();
-                        JsonObject gsonObject = (JsonObject)jsonParser.parse(objects.toString());
-                        list.add(gsonObject.get("title").getAsString());
-                        System.out.println(list);
-                        //Iterate through the elements of the array i.
-                        //Get thier value.
-                        //Get the value for the first element and the value for the last element.
-                    }
+                    list = getRecipeList();
                     TagView tagView = root.findViewById(R.id.text_view_show_more_two);
                     tagView.addTagSeparator(TagSeparator.AT_SEPARATOR);
                     String[] tagList = list.toArray(new String[0]);
@@ -111,4 +102,25 @@ public class DashboardFragment extends Fragment {
         return jsonstring;
     }
 
+    public List<String> getRecipeList() {
+        String json = null;
+        List<String> list = new ArrayList<String>();
+        try{
+            JSONArray getArray = outputapi();
+            for(int i = 0; i < getArray.length(); i++) {
+                JSONObject objects = getArray.getJSONObject(i);
+                JsonParser jsonParser = new JsonParser();
+                JsonObject gsonObject = (JsonObject)jsonParser.parse(objects.toString());
+                list.add(gsonObject.get("title").getAsString());
+                System.out.println(list);
+                //Iterate through the elements of the array i.
+                //Get their value.
+                //Get the value for the first element and the value for the last element.
+            }
+
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
 }

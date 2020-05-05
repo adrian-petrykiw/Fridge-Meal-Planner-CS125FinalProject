@@ -2,29 +2,18 @@ package com.example.mealplannercs125.ui.home;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.VolleyLog;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-
-import com.example.mealplannercs125.MainActivity;
 import com.example.mealplannercs125.R;
 import com.example.mealplannercs125.ui.dashboard.DashboardFragment;
 import com.mashape.unirest.http.Unirest;
@@ -34,19 +23,19 @@ import com.skyhope.materialtagview.TagView;
 import com.skyhope.materialtagview.enums.TagSeparator;
 import com.skyhope.materialtagview.model.TagModel;
 
+import java.util.List;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.JsonHttpResponseHandler;
+import com.mashape.unirest.http.HttpResponse;
+
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.IOException;
-import java.util.List;
-
 import javax.security.auth.callback.Callback;
-
-import okhttp3.OkHttpClient;
-import okhttp3.RequestBody;
+//import okhttp3.OkHttpClient;
+//import okhttp3.RequestBody;
 
 public class HomeFragment extends Fragment{
-    private RequestQueue mRequestQueue;
     private String url = "http://www.mocky.io/v2/597c41390f0000d002f4dbd1";
     private HomeViewModel homeViewModel;
     private String BASE_URL = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=dfe9b7f8ec604ff4a8542d687cb49953&includeNutrition=true&ingredients=apples,+flour,+sugar&number=1";

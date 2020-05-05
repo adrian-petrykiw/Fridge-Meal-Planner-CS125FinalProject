@@ -7,11 +7,35 @@
     android:background="#4CAF50"
     tools:context=".ui.notifications.NotificationsFragment">
 
+    <TextView
+        android:id="@+id/mealplan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="352dp"
+        android:layout_marginBottom="100dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/mealplanimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/mealplanimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/mealplan__2_"
+        app:layout_constraintBottom_toTopOf="@+id/nestedScrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="150dp"
         android:layout_marginBottom="50dp"
         android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,26 +47,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <EditText
-                android:id="@+id/mealplan"
-                android:layout_width="268dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginEnd="0dp"
-                android:layout_marginRight="0dp"
-                android:layout_marginBottom="10dp"
-                android:ems="10"
-                android:fontFamily="sans-serif"
-                android:inputType="textPersonName"
-                android:text="@string/meal_plan"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display3"
-                android:textColor="#FFFFFF"
-                app:layout_constraintBottom_toTopOf="@+id/mondaytext"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/mondaytext"
