@@ -22,20 +22,23 @@ import com.example.mealplannercs125.R;
 import com.example.mealplannercs125.ui.dashboard.DashboardFragment;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
+import com.mashape.unirest.http.Unirest;
+import com.mashape.unirest.request.GetRequest;
+import com.mashape.unirest.request.HttpRequest;
 import com.skyhope.materialtagview.TagView;
 import com.skyhope.materialtagview.enums.TagSeparator;
 import com.skyhope.materialtagview.model.TagModel;
 import org.json.JSONObject;
-
-
 import java.util.List;
+import com.mashape.unirest.request.GetRequest.*;
+
 
 import cz.msebera.android.httpclient.entity.mime.Header;
 
 public class HomeFragment extends Fragment{
 
     private HomeViewModel homeViewModel;
-    private String BASE_URL = "https://api.spoonacular.com/recipes/findByIngredients";
+    private String BASE_URL = "\"https://api.spoonacular.com/recipes/findByIngredients?apiKey=dfe9b7f8ec604ff4a8542d687cb49953&includeNutrition=true&ingredients=apples,+flour,+sugar&number=1\"";
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
@@ -68,21 +71,30 @@ public class HomeFragment extends Fragment{
         String[] tagList2 = new String[]{"aroma", "bagel"};
         tagView.setTagList(tagList);
         List<TagModel> selected = tagView.getSelectedTags();
+        HttpRequest request = Unirest.get(BASE_URL);
+        System.out.print(request);
         // to here
         Button recipegen = (Button) root.findViewById(R.id.generate_recipes);
         recipegen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent startDash = new Intent(getActivity(), DashboardFragment.class);
-                requestData(BASE_URL);
                 startActivity(startDash);
+                DashboardFragment nextFrag= new DashboardFragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.text_home, nextFrag, "findThisFragment")
+                        .addToBackStack(null)
+                        .commit();
             }
         });
 
         return root;
     }
     public void requestData(String url) {
-        Unirest.get(https://api.spoonacular.com/recipes/findByIngredients?apiKey=dfe9b7f8ec604ff4a8542d687cb49953&includeNutrition=true&ingredients=apples,+flour,+sugar&number=2);
+
+        GetRequest one = Unirest.get(url);
+        System.out.println(one);
+        //.get(https://api.spoonacular.com/recipes/findByIngredients?apiKey=dfe9b7f8ec604ff4a8542d687cb49953&includeNutrition=true&ingredients=apples,+flour,+sugar&number=2);
         /*
         AsyncHttpClient client = new AsyncHttpClient();
 
